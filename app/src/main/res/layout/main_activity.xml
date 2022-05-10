@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_gradient">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mainicon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:text="Pocket Money"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="모두가 편한 용돈 관리!"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/pButton"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:text="부모"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/login_btn_round" />
+        <Button
+            android:id="@+id/cButton"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:text="자녀"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_round" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

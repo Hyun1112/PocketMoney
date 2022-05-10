@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.company.pocketmoney">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PocketMoney">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ChildActivity" />
+        <activity android:name=".SetCActivity" />
+        <activity android:name=".SetCPlusActivity" />
+
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+    </application>
+
+    <supports-screens android:largeScreens="true" android:anyDensity="true" />
+
+</manifest>
