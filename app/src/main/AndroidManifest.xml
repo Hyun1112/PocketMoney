@@ -19,12 +19,14 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".ChildActivity" />
+        <activity android:name=".ChildMoneyActivity" />
+        <activity android:name=".ChildMoneyPlusActivity" />
+        <activity android:name=".ChildRewardActivity" />
         <activity android:name=".SetCActivity" />
         <activity android:name=".SetCPlusActivity" />
+        <activity android:name=".ParentActivity" />
+        <activity android:name=".ParentRewardActivity" />
 
-        <meta-data android:name="android.max_aspect" android:value="2.1" />
     </application>
-
-    <supports-screens android:largeScreens="true" android:anyDensity="true" />
 
 </manifest>

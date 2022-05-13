@@ -46,4 +46,3 @@ public class SetCPlusActivity extends AppCompatActivity {
         });
     }
 }
-

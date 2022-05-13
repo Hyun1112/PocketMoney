@@ -19,8 +19,8 @@ public class SetCActivity extends AppCompatActivity {
         budgetMod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SetCPlusActivity.class);
-                startActivity(intent);
+                Intent sendIntent = new Intent(getApplicationContext(), SetCPlusActivity.class);
+                startActivity(sendIntent);
             }
         });
 
@@ -31,22 +31,35 @@ public class SetCActivity extends AppCompatActivity {
         TextView hobbyBud = (TextView) findViewById(R.id.budgetHobby);
         TextView etcBud = (TextView) findViewById(R.id.budgetEtc);
 
-        Intent intent = getIntent();
+        int eat = 0;
+        int car = 0;
+        int pre = 0;
+        int hobby = 0;
+        int etc = 0;
 
-        int eat = intent.getExtras().getInt("eat");
-        eatBud.setText(String.valueOf(eat));
+        Intent recvIntent = getIntent();
 
-        int car = intent.getExtras().getInt("car");
-        carBud.setText(String.valueOf(car));
-
-        int pre = intent.getExtras().getInt("pre");
-        preBud.setText(String.valueOf(pre));
-
-        int hobby = intent.getExtras().getInt("hobby");
-        hobbyBud.setText(String.valueOf(hobby));
-
-        int etc = intent.getExtras().getInt("etc");
-        etcBud.setText(String.valueOf(etc));
+        if (recvIntent != null) {
+            eatBud.setText(recvIntent.getStringExtra("eat"));
+            carBud.setText(recvIntent.getStringExtra("car"));
+            preBud.setText(recvIntent.getStringExtra("pre"));
+            hobbyBud.setText(recvIntent.getStringExtra("hobby"));
+            etcBud.setText(recvIntent.getStringExtra("etc"));
+//            eat = Integer.valueOf(recvIntent.getStringExtra("eat"));
+//            eatBud.setText(String.valueOf(eat));
+//
+//            car = Integer.valueOf(recvIntent.getStringExtra("car"));
+//            carBud.setText(String.valueOf(car));
+//
+//            pre = Integer.valueOf(recvIntent.getStringExtra("pre"));
+//            preBud.setText(String.valueOf(pre));
+//
+//            hobby = Integer.valueOf(recvIntent.getStringExtra("hobby"));
+//            hobbyBud.setText(String.valueOf(hobby));
+//
+//            etc = Integer.valueOf(recvIntent.getStringExtra("etc"));
+//            etcBud.setText(String.valueOf(etc));
+        }
 
         // 지출 표시
         // 합치기

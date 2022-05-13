@@ -13,12 +13,33 @@ public class ChildActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_child);
 
+        ImageButton checkC = (ImageButton) findViewById(R.id.checkC);
+        checkC.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildMoneyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         ImageButton setC = (ImageButton) findViewById(R.id.setC);
         setC.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SetCActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton rewardC = (ImageButton) findViewById(R.id.rewardC);
+        rewardC.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildRewardActivity.class);
                 startActivity(intent);
             }
         });
