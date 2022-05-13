@@ -25,7 +25,7 @@
         <activity android:name=".SetCActivity" />
         <activity android:name=".SetCPlusActivity" />
         <activity android:name=".ParentActivity" />
-        <activity android:name=".ParentMoneyActivity" />
+        <activity android:name=".ParentSetActivity" />
         <activity android:name=".ParentRewardActivity" />
 
     </application>
