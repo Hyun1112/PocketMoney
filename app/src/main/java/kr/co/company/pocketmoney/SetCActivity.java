@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -97,6 +98,17 @@ public class SetCActivity extends AppCompatActivity {
 
                 etcBud.setText("");
                 outEtc.setText("");
+            }
+        });
+
+        // 뒤로가기 버튼
+        ImageButton btn_back = (ImageButton) findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildActivity.class);
+                startActivity(intent);
             }
         });
     }

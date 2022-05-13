@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -43,6 +44,16 @@ public class ChildMoneyPlusActivity extends AppCompatActivity implements View.On
         text = (TextView)findViewById(R.id.category);
 
         content.setOnClickListener(this);
+
+        ImageButton btn_back = (ImageButton) findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildMoneyActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

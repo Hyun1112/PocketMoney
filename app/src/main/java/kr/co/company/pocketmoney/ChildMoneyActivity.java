@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +45,17 @@ public class ChildMoneyActivity extends AppCompatActivity {
         }
 
          */
+
+
+        ImageButton btn_back = (ImageButton) findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
