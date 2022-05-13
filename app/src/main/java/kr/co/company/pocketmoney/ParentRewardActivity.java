@@ -58,12 +58,12 @@ public class ParentRewardActivity extends AppCompatActivity {
         });
 
         //버튼 클릭이벤트
-        //이름과 전화번호를 입력한 후 버튼을 클릭하면 어레이리스트에 데이터를 담고 리사이클러뷰에 띄운다.
+        //내용을 입력한 후 버튼을 클릭하면 어레이리스트에 데이터를 담고 리사이클러뷰에 띄운다.
         btn_save.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
                 if(edit_name.getText ().length ()==0){
-                    Toast.makeText (mContext,"이름과 전화번호를 입력해주세요", Toast.LENGTH_SHORT).show ();
+                    Toast.makeText (mContext,"내용을 입력해주세요", Toast.LENGTH_SHORT).show ();
                 }else{
                     String name = edit_name.getText ().toString ();
                     edit_name.setText ("");
