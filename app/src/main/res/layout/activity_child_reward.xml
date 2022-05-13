@@ -14,7 +14,7 @@
             android:layout_height="wrap_content" >
 
             <ImageButton
-                android:id="@+id/btn_back"
+                android:id="@+id/btn_cback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
@@ -108,19 +108,19 @@
                 android:id="@+id/txt_reward1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용1"
+                android:text="신발 정리"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:layout_marginLeft="75dp"
+                android:layout_marginLeft="65dp"
                 android:layout_marginTop="140dp"/>
 
             <TextView
                 android:id="@+id/txt_reward2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용2"
+                android:text="방 청소"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp"
@@ -132,7 +132,7 @@
                 android:id="@+id/txt_reward3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용3"
+                android:text="설거지"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp"
@@ -144,7 +144,7 @@
                 android:id="@+id/txt_reward4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용4"
+                android:text="안마"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp"
@@ -156,12 +156,12 @@
                 android:id="@+id/txt_reward5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용5"
+                android:text="빨래 개기"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:layout_marginLeft="285dp"
+                android:layout_marginLeft="275dp"
                 android:layout_marginTop="350dp"/>
 
         </FrameLayout>

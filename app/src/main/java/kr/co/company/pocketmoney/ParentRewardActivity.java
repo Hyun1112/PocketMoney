@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,15 @@ public class ParentRewardActivity extends AppCompatActivity {
         edit_name = findViewById (R.id.edit_name);
         btn_save = findViewById (R.id.btn_save);
         mRecyclerView = findViewById (R.id.recycler);
+
+        ImageButton backButton = (ImageButton) findViewById(R.id.btn_back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ParentActivity.class);
+                startActivity(intent);
+            }
+        });
 
         LinearLayoutManager layoutManager = new LinearLayoutManager (mContext, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager (layoutManager);
@@ -66,6 +76,12 @@ public class ParentRewardActivity extends AppCompatActivity {
                     Toast.makeText (mContext,"내용을 입력해주세요", Toast.LENGTH_SHORT).show ();
                 }else{
                     String name = edit_name.getText ().toString ();
+
+                    //입력받은 값 ChildRewardActivity에 intent
+                    Intent sendIntent = new Intent(getApplicationContext(), ChildRewardActivity.class);
+                    sendIntent.putExtra("message", name);
+                    //startActivity(sendIntent);
+
                     edit_name.setText ("");
                     RewardItem rewardItem = new RewardItem(name);
 
@@ -76,4 +92,5 @@ public class ParentRewardActivity extends AppCompatActivity {
         });
 
     }
+
 }

@@ -33,10 +33,10 @@
 
     <LinearLayout
         android:layout_width="380dp"
-        android:layout_height="650dp"
+        android:layout_height="630dp"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/layout_background"
+        android:background="@drawable/login_corner"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +44,11 @@
 
         <EditText
             android:id="@+id/edit_name"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="내용을 입력해주세요."/>
+            android:hint="내용을 입력해주세요."
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal" />
 
         <ImageButton
             android:id="@+id/btn_save"
@@ -58,7 +60,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

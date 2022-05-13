@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ public class SetCPlusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cset_plus);
 
-        Button modButton = (Button) findViewById(R.id.modButton);
+        LinearLayout modButton = (LinearLayout) findViewById(R.id.modButton);
         EditText eatModify = (EditText) findViewById(R.id.eatModify);
         EditText carModify = (EditText) findViewById(R.id.carModify);
         EditText prepareModify = (EditText) findViewById(R.id.prepareModify);
