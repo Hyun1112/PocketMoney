@@ -4,58 +4,72 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import kr.co.company.pocketmoney.R;
+
 public class ChildMoneyActivity extends AppCompatActivity {
 
     private TextView selected_day, selected_io, selected_money;
     private ImageView selected_category;
+    ImageButton imageButton;
+    String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.child_money);//xml
 
-        Bundle bundle = getIntent().getExtras();
-        TextView selected_io = (TextView)findViewById(R.id.selected_io);
+        imageButton = findViewById(R.id.plusMoney);
 
-        selected_io.setText(bundle.getString("지출","no data"));
+        selected_io = findViewById(R.id.selected_io);
+        selected_money = findViewById(R.id.selected_money);
+        selected_category = findViewById(R.id.selected_category);
+        selected_day = findViewById(R.id.selected_day);
 
-        /*
-        Intent it = getIntent(); //인텐트 받기 선언
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ChildMoneyPlusActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        // 이전에 보냈던 it_check의 값을 받아 str에 저장
-        String str= it.getStringExtra("it_check"); //즉 str = "option1" 또는 "option2" 가 들어있음
-
-        // 이 값을 이용하여 필요한 동작 구현
-        if(str.equals("지출")){
-            //str 값이 option1 이라면
-            // 필요한 동작 코드 작성
-            //텍스트, 색 바꾸기
-            selected_io.setText("지출");
-
-        }else if(str.equals("수입")){
-            //str 값이 option2 라면
-            // 필요한 동작 코드 작성
-            selected_io.setText("수입");
-        }
-
-         */
-
-
-        ImageButton btn_back = (ImageButton) findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-
+        ImageButton backButton = (ImageButton) findViewById(R.id.btn_back);
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ChildActivity.class);
                 startActivity(intent);
             }
         });
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            //Intent intent = getIntent();
+            selected_io.setText(bundle.getString("io", "null"));
+            selected_money.setText(bundle.getString("money", "null"));
+            category = bundle.getString("category");
+            selected_day.setText(bundle.getString("day", "null"));
+
+            if (category.equals("식비")) {
+                selected_category.setImageResource(R.drawable.eat);
+            } else if (category.equals("교통")) {
+                selected_category.setImageResource(R.drawable.car);
+            } else if (category.equals("준비물")) {
+                selected_category.setImageResource(R.drawable.prepare);
+            } else if (category.equals("문화")) {
+                selected_category.setImageResource(R.drawable.hobby);
+            } else if (category.equals("기타")) {
+                selected_category.setImageResource(R.drawable.etc);
+            }
+        }
 
     }
 

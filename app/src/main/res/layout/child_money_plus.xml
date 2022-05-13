@@ -177,8 +177,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="15"
                     android:gravity="center"
-                    android:text="식비"
-                    android:textSize="20dp" />
+                    android:text="카테고리를 선택해주세요."
+                    android:textSize="15dp" />
 
                 <Button
                     android:id="@+id/content"
