@@ -3,15 +3,13 @@ package kr.co.company.pocketmoney;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SetCPlusActivity extends AppCompatActivity {
+public class ChildSetPlusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +25,13 @@ public class SetCPlusActivity extends AppCompatActivity {
         modButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SetCActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChildSetActivity.class);
 
-                String eatMod = eatModify.getText().toString();
-                String carMod = carModify.getText().toString();
-                String preMod = prepareModify.getText().toString();
-                String hobbyMod = hobbyModify.getText().toString();
-                String etcMod = etcModify.getText().toString();
+                Integer eatMod = Integer.parseInt(eatModify.getText().toString());
+                Integer carMod = Integer.parseInt(carModify.getText().toString());
+                Integer preMod = Integer.parseInt(prepareModify.getText().toString());
+                Integer hobbyMod = Integer.parseInt(hobbyModify.getText().toString());
+                Integer etcMod = Integer.parseInt(etcModify.getText().toString());
 
                 intent.putExtra("eat", eatMod);
                 intent.putExtra("car", carMod);
@@ -53,7 +51,7 @@ public class SetCPlusActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SetCActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChildSetActivity.class);
                 startActivity(intent);
             }
         });

@@ -48,12 +48,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="예산"
-                android:textSize="24dp"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
+                android:text="예산"
                 android:textColor="@color/blue"
-                android:textStyle="bold"/>
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="0dp"
@@ -64,19 +64,19 @@
                 android:id="@+id/budgetTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="24dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원"
-                android:textSize="24dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:text="원"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,12 +91,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="지출"
-                android:textSize="24dp"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
+                android:text="지출"
                 android:textColor="@color/red"
-                android:textStyle="bold"/>
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="0dp"
@@ -107,19 +107,19 @@
                 android:id="@+id/outTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="24dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원"
-                android:textSize="24dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:text="원"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,12 +134,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="잔액"
-                android:textSize="24dp"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
+                android:text="잔액"
                 android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="0dp"
@@ -150,19 +150,19 @@
                 android:id="@+id/total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="24dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원"
-                android:textSize="24dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:text="원"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -176,17 +176,17 @@
             android:padding="6dp">
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left" >
+                    android:layout_gravity="left">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -212,22 +212,22 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="right" >
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="예산"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="예산"
                             android:textColor="@color/blue"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -238,33 +238,33 @@
                             android:id="@+id/budgetEat"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="지출"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="지출"
                             android:textColor="@color/red"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -275,34 +275,34 @@
                             android:id="@+id/outEat"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left" >
+                    android:layout_gravity="left">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -328,22 +328,22 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="right" >
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="예산"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="예산"
                             android:textColor="@color/blue"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -354,33 +354,33 @@
                             android:id="@+id/budgetCar"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="지출"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="지출"
                             android:textColor="@color/red"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -391,34 +391,34 @@
                             android:id="@+id/outCar"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left" >
+                    android:layout_gravity="left">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -444,22 +444,22 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="right" >
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="예산"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="예산"
                             android:textColor="@color/blue"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -470,33 +470,33 @@
                             android:id="@+id/budgetPrepare"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="지출"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="지출"
                             android:textColor="@color/red"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -507,34 +507,34 @@
                             android:id="@+id/outPrepare"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left" >
+                    android:layout_gravity="left">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -560,22 +560,22 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="right" >
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="예산"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="예산"
                             android:textColor="@color/blue"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -586,33 +586,33 @@
                             android:id="@+id/budgetHobby"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="지출"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="지출"
                             android:textColor="@color/red"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -623,34 +623,34 @@
                             android:id="@+id/outHobby"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left" >
+                    android:layout_gravity="left">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -676,22 +676,22 @@
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="right" >
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="예산"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="예산"
                             android:textColor="@color/blue"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -702,33 +702,33 @@
                             android:id="@+id/budgetEtc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="지출"
-                            android:textSize="20dp"
                             android:layout_gravity="left"
+                            android:text="지출"
                             android:textColor="@color/red"
-                            android:textStyle="bold"/>
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <View
                             android:layout_width="0dp"
@@ -739,18 +739,18 @@
                             android:id="@+id/outEtc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="원"
-                            android:textSize="20dp"
                             android:layout_gravity="right"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"/>
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -758,9 +758,9 @@
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
-                android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -769,22 +769,21 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
+                    android:background="@drawable/login_btn_round"
                     android:text="수정"
                     android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/login_btn_round" />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/budgetReset"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
+                    android:background="@drawable/login_btn_round"
                     android:text="초기화"
                     android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:background="@drawable/login_btn_round" />
+                    android:textStyle="bold" />
             </LinearLayout>
-
 
 
         </LinearLayout>

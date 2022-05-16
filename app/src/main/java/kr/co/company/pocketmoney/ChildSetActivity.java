@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SetCActivity extends AppCompatActivity {
+public class ChildSetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class SetCActivity extends AppCompatActivity {
         budgetMod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent sendIntent = new Intent(getApplicationContext(), SetCPlusActivity.class);
+                Intent sendIntent = new Intent(getApplicationContext(), ChildSetPlusActivity.class);
                 startActivity(sendIntent);
             }
         });
@@ -41,42 +41,46 @@ public class SetCActivity extends AppCompatActivity {
         Intent recvIntent = getIntent();
 
         if (recvIntent != null) {
-            eatBud.setText(recvIntent.getStringExtra("eat"));
-            carBud.setText(recvIntent.getStringExtra("car"));
-            preBud.setText(recvIntent.getStringExtra("pre"));
-            hobbyBud.setText(recvIntent.getStringExtra("hobby"));
-            etcBud.setText(recvIntent.getStringExtra("etc"));
-//            eat = Integer.valueOf(recvIntent.getStringExtra("eat"));
-//            eatBud.setText(String.valueOf(eat));
-//
-//            car = Integer.valueOf(recvIntent.getStringExtra("car"));
-//            carBud.setText(String.valueOf(car));
-//
-//            pre = Integer.valueOf(recvIntent.getStringExtra("pre"));
-//            preBud.setText(String.valueOf(pre));
-//
-//            hobby = Integer.valueOf(recvIntent.getStringExtra("hobby"));
-//            hobbyBud.setText(String.valueOf(hobby));
-//
-//            etc = Integer.valueOf(recvIntent.getStringExtra("etc"));
-//            etcBud.setText(String.valueOf(etc));
+            eat = recvIntent.getIntExtra("eat", 0);
+            eatBud.setText(String.valueOf(eat));
+
+            car = recvIntent.getIntExtra("car", 0);
+            carBud.setText(String.valueOf(car));
+
+            pre = recvIntent.getIntExtra("pre", 0);
+            preBud.setText(String.valueOf(pre));
+
+            hobby = recvIntent.getIntExtra("hobby", 0);
+            hobbyBud.setText(String.valueOf(hobby));
+
+            etc = recvIntent.getIntExtra("etc", 0);
+            etcBud.setText(String.valueOf(etc));
         }
 
         // 지출 표시
-        // 합치기
+        // 임의로 설정함
         TextView outEat = (TextView) findViewById(R.id.outEat);
         TextView outCar = (TextView) findViewById(R.id.outCar);
         TextView outPrepare = (TextView) findViewById(R.id.outPrepare);
         TextView outHobby = (TextView) findViewById(R.id.outHobby);
         TextView outEtc = (TextView) findViewById(R.id.outEtc);
+        outEat.setText("3000");
+        outCar.setText("1000");
+        outPrepare.setText("0");
+        outHobby.setText("0");
+        outEtc.setText("0");
 
-        // 총액 표시
+
+        // 총 예산
         TextView budgetTotal = (TextView) findViewById(R.id.budgetTotal);
         int budget = eat + car + pre + hobby + etc;
         budgetTotal.setText(String.valueOf(budget));
-        // 합치기
+        // 총 지출, 잔액 - 임의로 설정
         TextView outTotal = (TextView) findViewById(R.id.outTotal);
         TextView total = (TextView) findViewById(R.id.total);
+        outTotal.setText("4000");
+        total.setText("1000");
+
 
 
         // 초기화 버튼
@@ -98,6 +102,10 @@ public class SetCActivity extends AppCompatActivity {
 
                 etcBud.setText("");
                 outEtc.setText("");
+
+                budgetTotal.setText("");
+                outTotal.setText("");
+                total.setText("");
             }
         });
 

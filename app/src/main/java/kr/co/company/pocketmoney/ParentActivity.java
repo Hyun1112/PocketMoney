@@ -13,6 +13,18 @@ public class ParentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_parent);
 
+        // 용돈기입장 확인하기
+        ImageButton checkP  = (ImageButton) findViewById(R.id.checkP);
+        checkP.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ParentMoneyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 용돈 설정하기
         ImageButton setP  = (ImageButton) findViewById(R.id.setP);
         setP.setOnClickListener(new View.OnClickListener() {
 
@@ -23,6 +35,7 @@ public class ParentActivity extends AppCompatActivity {
             }
         });
 
+        // 리워드 설정하기
         ImageButton rewardP = (ImageButton) findViewById(R.id.rewardP);
         rewardP.setOnClickListener(new View.OnClickListener() {
 

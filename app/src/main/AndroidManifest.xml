@@ -22,9 +22,10 @@
         <activity android:name=".ChildMoneyActivity" />
         <activity android:name=".ChildMoneyPlusActivity" />
         <activity android:name=".ChildRewardActivity" />
-        <activity android:name=".SetCActivity" />
-        <activity android:name=".SetCPlusActivity" />
+        <activity android:name=".ChildSetActivity" />
+        <activity android:name=".ChildSetPlusActivity" />
         <activity android:name=".ParentActivity" />
+        <activity android:name=".ParentMoneyActivity" />
         <activity android:name=".ParentSetActivity" />
         <activity android:name=".ParentRewardActivity" />
 

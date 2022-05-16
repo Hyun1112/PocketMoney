@@ -14,7 +14,7 @@ public class ParentSetActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pmoney);
+        setContentView(R.layout.activity_pset);
 
         Button moneyP = (Button) findViewById(R.id.moneyP);
         moneyP.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +31,7 @@ public class ParentSetActivity extends AppCompatActivity {
             }
         });
 
+        // 뒤로가기 버튼
         ImageButton backButton = (ImageButton) findViewById(R.id.btn_back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

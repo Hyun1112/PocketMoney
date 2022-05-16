@@ -3,7 +3,6 @@ package kr.co.company.pocketmoney;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +29,7 @@ public class ChildActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SetCActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ChildSetActivity.class);
                 startActivity(intent);
             }
         });

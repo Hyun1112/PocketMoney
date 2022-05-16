@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +23,8 @@ public class ChildMoneyPlusActivity extends AppCompatActivity {
     private TextView textview_date, text;
     EditText money_text;
     public String ioselected = "지출";
-    String selected_category, money, selected_day;
+    String selected_category, selected_day;
+    int money;
 
     private RadioGroup radioGroup;
     private DatePickerDialog.OnDateSetListener callbackMethod;
@@ -39,7 +39,7 @@ public class ChildMoneyPlusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.child_money_plus); //xml : child_money_plus
+        setContentView(R.layout.activity_cmoney_plus); //xml : child_money_plus
 
         ImageButton backButton = (ImageButton) findViewById(R.id.btn_back);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -109,12 +109,10 @@ public class ChildMoneyPlusActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),ChildMoneyActivity.class);
                 Bundle bundle = new Bundle();
 
-                money = money_text.getText().toString();
-                System.out.println(money);
+                money = Integer.parseInt(money_text.getText().toString());
 
-                //int money = Integer.parseInt(money_text.getText().toString());
                 bundle.putString("io", ioselected);
-                bundle.putString("money", money);
+                bundle.putInt("money", money);
                 bundle.putString("category", selected_category);
                 bundle.putString("day", selected_day);
 
