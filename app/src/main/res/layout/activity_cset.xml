@@ -767,7 +767,7 @@
                 <Button
                     android:id="@+id/budgetMod"
                     android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/login_btn_round"
                     android:text="수정"
@@ -777,7 +777,7 @@
                 <Button
                     android:id="@+id/budgetReset"
                     android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/login_btn_round"
                     android:text="초기화"

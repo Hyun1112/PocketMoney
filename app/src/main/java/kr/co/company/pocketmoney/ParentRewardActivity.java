@@ -78,8 +78,8 @@ public class ParentRewardActivity extends AppCompatActivity {
                     String name = edit_name.getText ().toString ();
 
                     //입력받은 값 ChildRewardActivity에 intent
-                    Intent sendIntent = new Intent(getApplicationContext(), ChildRewardActivity.class);
-                    sendIntent.putExtra("message", name);
+                    //Intent sendIntent = new Intent(getApplicationContext(), ChildRewardActivity.class);
+                    //sendIntent.putExtra("message", name);
                     //startActivity(sendIntent);
 
                     edit_name.setText ("");

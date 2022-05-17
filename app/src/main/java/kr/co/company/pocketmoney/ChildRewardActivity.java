@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ChildRewardActivity extends AppCompatActivity {
-    TextView txt_reward;
+    //TextView txt_reward;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,11 @@ public class ChildRewardActivity extends AppCompatActivity {
         final TextView btn_selector5 = (TextView) findViewById(R.id.btn_selector5);
 
         //putExtra()로 전달한 값을 출력
-        Intent receiveIntent = getIntent();
-        String receiveMessage = receiveIntent.getStringExtra("message");
-        txt_reward = (TextView) findViewById(R.id.txt_reward1);
-        txt_reward.setTextSize(18);
-        txt_reward.setText(receiveMessage);
+        //Intent receiveIntent = getIntent();
+        //String receiveMessage = receiveIntent.getStringExtra("message");
+        //txt_reward = (TextView) findViewById(R.id.txt_reward1);
+        //txt_reward.setTextSize(18);
+        //txt_reward.setText(receiveMessage);
 
         // 클릭시 선택.
         btn_selector1.setOnClickListener(new View.OnClickListener() {
