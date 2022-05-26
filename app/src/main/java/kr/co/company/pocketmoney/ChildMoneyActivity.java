@@ -2,6 +2,7 @@ package kr.co.company.pocketmoney;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -24,16 +25,17 @@ public class ChildMoneyActivity extends AppCompatActivity {
     private MoneyAdapter adapter;
     ImageButton imageButton;
 
+    DatabaseHelper myDB = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cmoney);
 
-
         // 잔액
         TextView balance = (TextView) findViewById(R.id.balance);
+        balance.setText("0");
         int bal = 0;
-        balance.setText(String.valueOf(bal));
 
         // 글쓰기 버튼
         imageButton = findViewById(R.id.plusMoney);
@@ -70,13 +72,14 @@ public class ChildMoneyActivity extends AppCompatActivity {
         final MoneyAdapter adapter = new MoneyAdapter();
         recyclerView.setAdapter(adapter);
 
+        /*
         // 일단 임의로 설정..
         adapter.addItem(new MoneyItem("지출", "2022년 4월 30일", "3000", "식비"));
         adapter.addItem(new MoneyItem("수입", "2022년 5월 1일", "5000", "기타"));
         adapter.notifyDataSetChanged();
         bal = bal + 5000 - 3000;
         balance.setText(String.valueOf(bal));
-
+        */
 
 
         // 글쓰기 -> 인텐트 가져오기
@@ -91,20 +94,32 @@ public class ChildMoneyActivity extends AppCompatActivity {
             String category = bundle.getString("category");
             String day = bundle.getString("day", "null");
 
-            adapter.addItem(new MoneyItem(io, day, money, category));
-            adapter.notifyDataSetChanged();
 
-            if (io.equals("수입")) {
-                bal += m;
-            }
-            else {
-                bal -= m;
-            }
-
-            balance.setText(String.valueOf(bal));
+            // 데이터 삽입
+            myDB.insertData(io, day, money, category);
 
         }
 
+        // 데이터 조회
+        Cursor res = myDB.getAllData();
+
+        while(res.moveToNext()){
+            String getIO = res.getString(1);
+            String getDay = res.getString(2);
+            String getMoney = res.getString(3);
+            String getContent = res.getString(4);
+
+            adapter.addItem(new MoneyItem(getIO, getDay, getMoney, getContent));
+
+
+            if (getIO.equals("수입"))
+                bal += Integer.parseInt(getMoney);
+            else
+                bal -= Integer.parseInt(getMoney);
+        }
+
+        balance.setText(Integer.toString(bal));
+        adapter.notifyDataSetChanged();
     }
 
 }
