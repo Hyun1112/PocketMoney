@@ -6,11 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +24,8 @@ public class ParentRewardActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private EditText edit_name;
     private ImageButton btn_save;
+
+    DatabaseHelper myDB = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +65,16 @@ public class ParentRewardActivity extends AppCompatActivity {
             //삭제
             @Override
             public void onDeleteClick(View v, int position) {
+                String reward = mArrayList.get(position).getName();
+
                 mArrayList.remove(position);
                 mRewardAdapter.notifyItemRemoved(position);
+
+                Integer deleteRows = myDB.deleteR(reward);
+                if(deleteRows>0)
+                    Toast.makeText(ParentRewardActivity.this,"삭제되었습니다.",Toast.LENGTH_LONG ).show();
+                else
+                    Toast.makeText(ParentRewardActivity.this,"삭제 실패",Toast.LENGTH_LONG ).show();
             }
 
         });
@@ -72,10 +84,14 @@ public class ParentRewardActivity extends AppCompatActivity {
         btn_save.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                if(edit_name.getText ().length ()==0){
+                if (edit_name.getText().length()==0) {
                     Toast.makeText (mContext,"내용을 입력해주세요", Toast.LENGTH_SHORT).show ();
-                }else{
-                    String name = edit_name.getText ().toString ();
+                }
+                else {
+                    String name = edit_name.getText().toString();
+
+                    // 데이터 삽입
+                    myDB.insertR(name);
 
                     //입력받은 값 ChildRewardActivity에 intent
                     //Intent sendIntent = new Intent(getApplicationContext(), ChildRewardActivity.class);
@@ -87,10 +103,21 @@ public class ParentRewardActivity extends AppCompatActivity {
 
                     mArrayList.add (rewardItem);
                     mRewardAdapter.notifyItemInserted (mArrayList.size ()-1);
+
                 }
             }
         });
 
+        // 데이터 조회
+        Cursor res = myDB.getR();
+
+        while(res.moveToNext()){
+            String getReward = res.getString(1);
+            RewardItem rewardItem = new RewardItem(getReward);
+            mArrayList.add (rewardItem);
+        }
+
+        mRewardAdapter.notifyItemInserted (mArrayList.size ()-1);
     }
 
 }

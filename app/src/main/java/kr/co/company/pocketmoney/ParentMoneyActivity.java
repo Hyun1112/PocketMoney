@@ -54,7 +54,7 @@ public class ParentMoneyActivity extends AppCompatActivity {
         */
 
         // 데이터 조회
-        Cursor res = myDB.getAllData();
+        Cursor res = myDB.getM();
 
         while(res.moveToNext()){
             String getIO = res.getString(1);

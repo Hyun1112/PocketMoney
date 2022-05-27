@@ -22,7 +22,6 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="20dp"
         android:gravity="center_vertical"
-        android:text="신발정리"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp" />

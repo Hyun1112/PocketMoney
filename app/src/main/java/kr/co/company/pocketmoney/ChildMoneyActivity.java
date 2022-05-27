@@ -96,12 +96,12 @@ public class ChildMoneyActivity extends AppCompatActivity {
 
 
             // 데이터 삽입
-            myDB.insertData(io, day, money, category);
+            myDB.insertM(io, day, money, category);
 
         }
 
         // 데이터 조회
-        Cursor res = myDB.getAllData();
+        Cursor res = myDB.getM();
 
         while(res.moveToNext()){
             String getIO = res.getString(1);
