@@ -10,7 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ParentSetActivity extends AppCompatActivity {
+    DatabaseHelper myDB = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +29,15 @@ public class ParentSetActivity extends AppCompatActivity {
                 EditText inputMoney = (EditText) findViewById(R.id.textView);
                 String money = inputMoney.getText().toString();
 
-                // 수입으로 보내기 ?
+                // 날짜
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+                String getTime = sdf.format(date);
+
+                // 수입에 추가
+                myDB.insertM("수입", getTime, money, "기타");
+
 
                 // 완료
                 Toast.makeText(ParentSetActivity.this, "설정이 완료되었습니다.", Toast.LENGTH_LONG).show();

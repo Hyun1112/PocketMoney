@@ -135,7 +135,17 @@ public class ChildMoneyPlusActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
             {
-                textview_date.setText(year + "년  " + (monthOfYear+1) + "월  " + dayOfMonth + "일");
+                String mm = Integer.toString(monthOfYear+1);
+                String dd = Integer.toString(dayOfMonth);
+
+                if (mm.length() == 1)
+                    mm = "0" + mm;
+
+                if (dd.length() == 1)
+                    dd = "0" + dd;
+
+
+                textview_date.setText(year + "년  " + mm + "월  " + dd + "일");
                 selected_day=textview_date.getText().toString();    //textview 선택된 날짜로 변경
             }
         };
