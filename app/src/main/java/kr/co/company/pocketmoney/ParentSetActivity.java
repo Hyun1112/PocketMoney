@@ -32,7 +32,7 @@ public class ParentSetActivity extends AppCompatActivity {
                 // 날짜
                 long now = System.currentTimeMillis();
                 Date date = new Date(now);
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy년  MM월  dd일");
                 String getTime = sdf.format(date);
 
                 // 수입에 추가

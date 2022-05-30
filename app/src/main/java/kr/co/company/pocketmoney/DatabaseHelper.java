@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // 테이블 명
     public static final String TABLE_MONEY = "money_table";
     public static final String TABLE_REWARD = "reward_table";
+    // public static final String TABLE_BUDGET = "budget_table";
 
     // TABLE_MONEY 항목
     public static final String M_1 = "id";
@@ -27,6 +28,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // TABLE_REWARD 항목
     public static final String R_1 = "reward";
 
+    /*
+    // TABLE_BUDGET 항목
+    public static final String B_1 = "id";
+    public static final String B_2 = "eat";
+    public static final String B_3 = "car";
+    public static final String B_4 = "pre";
+    public static final String B_5 = "hobby";
+    public static final String B_6 = "etc";
+    */
+
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -35,12 +46,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_MONEY + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, IO TEXT, DATE TEXT, MONEY TEXT, CONTENT TEXT)");
         db.execSQL("create table " + TABLE_REWARD + "(REWARD TEXT PRIMARY KEY)");
+        // db.execSQL("create table " + TABLE_BUDGET + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, EAT TEXT, CAR TEXT, PRE TEXT, HOBBY TEXT, ETC TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_MONEY);
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_REWARD);
+        // db.execSQL("DROP TABLE IF EXISTS "+ TABLE_BUDGET);
         onCreate(db);
 
     }
@@ -73,6 +86,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    /*
+    // 예산 항목 추가
+    public boolean insertB (String eat, String car, String pre, String hobby, String etc) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(B_2,eat);
+        contentValues.put(B_3,car);
+        contentValues.put(B_4,pre);
+        contentValues.put(B_5,hobby);
+        contentValues.put(B_6,etc);
+        long result = db.insert(TABLE_BUDGET, null,contentValues);
+        if(result == -1)
+            return false;
+        else
+            return true;
+
+    }
+     */
+
     // 용돈기입장 읽어오기
     public Cursor getM() {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -92,6 +124,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_REWARD, "REWARD = ? ",new String[]{reward});
     }
+
 
     /*
     //데이터베이스 수정하기

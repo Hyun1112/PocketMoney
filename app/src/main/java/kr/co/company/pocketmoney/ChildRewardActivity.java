@@ -39,7 +39,7 @@ public class ChildRewardActivity extends AppCompatActivity {
         int i = 0;
 
         while(res.moveToNext()) {
-            String getReward = res.getString(1);
+            String getReward = res.getString(0);
             txt_reward[i].setTextSize(18);
             txt_reward[i].setText(getReward);
             i++;
