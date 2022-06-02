@@ -26,7 +26,7 @@ public class GraphActivity extends AppCompatActivity {
 
     PieChart pieChart;
     ExpensesByTag expensesByTag = null;
-    String spinner_date = "05월";
+    String spinner_date = "06월";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class GraphActivity extends AppCompatActivity {
 
         // Spinner
         Spinner monthSpinner = (Spinner)findViewById(R.id.spinner_month);
-        monthSpinner.setSelection(4);   // 초기선택 05월로 세팅
+        monthSpinner.setSelection(5);   // 초기선택 05월로 세팅
 
         monthSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

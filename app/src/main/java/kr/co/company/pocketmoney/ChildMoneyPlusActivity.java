@@ -153,7 +153,7 @@ public class ChildMoneyPlusActivity extends AppCompatActivity {
 
     public void OnClickHandler(View view)
     {
-        DatePickerDialog dialog = new DatePickerDialog(this, callbackMethod, 2022, 4, 1);
+        DatePickerDialog dialog = new DatePickerDialog(this, callbackMethod, 2022, 5, 2);
         dialog.show();
     }
 
