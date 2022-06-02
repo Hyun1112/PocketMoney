@@ -87,6 +87,9 @@ public class ParentRewardActivity extends AppCompatActivity {
                 if (edit_name.getText().length()==0) {
                     Toast.makeText (mContext,"내용을 입력해주세요", Toast.LENGTH_SHORT).show ();
                 }
+                else if (mArrayList.size() > 4) {
+                    Toast.makeText (mContext,"리워드의 최대 개수는 5개입니다.", Toast.LENGTH_SHORT).show ();
+                }
                 else {
                     String name = edit_name.getText().toString();
 
