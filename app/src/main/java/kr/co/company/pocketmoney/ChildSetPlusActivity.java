@@ -1,6 +1,7 @@
 package kr.co.company.pocketmoney;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,6 +11,9 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChildSetPlusActivity extends AppCompatActivity {
+
+    DatabaseHelper myDB = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +31,20 @@ public class ChildSetPlusActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ChildSetActivity.class);
 
-                Integer eatMod = Integer.parseInt(eatModify.getText().toString());
-                Integer carMod = Integer.parseInt(carModify.getText().toString());
-                Integer preMod = Integer.parseInt(prepareModify.getText().toString());
-                Integer hobbyMod = Integer.parseInt(hobbyModify.getText().toString());
-                Integer etcMod = Integer.parseInt(etcModify.getText().toString());
+                String eat = eatModify.getText().toString();
+                String car = carModify.getText().toString();
+                String pre = prepareModify.getText().toString();
+                String hob = hobbyModify.getText().toString();
+                String etc = etcModify.getText().toString();
 
-                intent.putExtra("eat", eatMod);
-                intent.putExtra("car", carMod);
-                intent.putExtra("pre", preMod);
-                intent.putExtra("hobby", hobbyMod);
-                intent.putExtra("etc", etcMod);
+                Cursor cur1 = myDB.getB();
+
+                if (cur1.moveToFirst()) {
+                    myDB.updateB("1", String.valueOf(eat), String.valueOf(car), String.valueOf(pre), String.valueOf(hob), String.valueOf(etc));
+                }
+                else {
+                    myDB.insertB("1", String.valueOf(eat), String.valueOf(car), String.valueOf(pre), String.valueOf(hob), String.valueOf(etc));
+                }
 
                 // Toast.makeText(SetCPlusActivity.this, "수정완료", Toast.LENGTH_LONG).show();
 

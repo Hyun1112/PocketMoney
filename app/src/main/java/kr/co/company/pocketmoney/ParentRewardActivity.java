@@ -91,7 +91,7 @@ public class ParentRewardActivity extends AppCompatActivity {
                     String name = edit_name.getText().toString();
 
                     // 데이터 삽입
-                    myDB.insertR(name);
+                    myDB.insertR(name, "false");
 
                     //입력받은 값 ChildRewardActivity에 intent
                     //Intent sendIntent = new Intent(getApplicationContext(), ChildRewardActivity.class);

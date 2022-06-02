@@ -24,6 +24,7 @@ public class ChildMoneyActivity extends AppCompatActivity {
 
     private MoneyAdapter adapter;
     ImageButton imageButton;
+    ImageButton imageButton2;
 
     DatabaseHelper myDB = new DatabaseHelper(this);
 
@@ -43,6 +44,16 @@ public class ChildMoneyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ChildMoneyPlusActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //그래프 버튼
+        imageButton2 = findViewById(R.id.graph);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ChildGraphActivity.class);
                 startActivity(intent);
             }
         });

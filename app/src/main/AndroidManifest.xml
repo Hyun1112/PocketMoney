@@ -24,6 +24,7 @@
         <activity android:name=".ChildRewardActivity" />
         <activity android:name=".ChildSetActivity" />
         <activity android:name=".ChildSetPlusActivity" />
+        <activity android:name=".ChildGraphActivity" />
         <activity android:name=".ParentActivity" />
         <activity android:name=".ParentMoneyActivity" />
         <activity android:name=".ParentSetActivity" />
