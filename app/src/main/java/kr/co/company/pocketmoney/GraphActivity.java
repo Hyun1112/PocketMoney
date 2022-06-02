@@ -22,7 +22,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class ChildGraphActivity extends AppCompatActivity {
+public class GraphActivity extends AppCompatActivity {
 
     PieChart pieChart;
     ExpensesByTag expensesByTag = null;
@@ -75,7 +75,7 @@ public class ChildGraphActivity extends AppCompatActivity {
             String date = null;
             int exchangedAmount = 0;
             //데이터베이스 값 불러오기
-            DatabaseHelper helper = new DatabaseHelper(ChildGraphActivity.this);
+            DatabaseHelper helper = new DatabaseHelper(GraphActivity.this);
             SQLiteDatabase db = helper.getReadableDatabase();
 
             String sql = "select date, money, content from money_table where io LIKE '지출'";

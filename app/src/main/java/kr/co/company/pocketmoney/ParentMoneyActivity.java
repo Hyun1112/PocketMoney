@@ -20,9 +20,18 @@ public class ParentMoneyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cmoney);
 
-        // 일단 글쓰기 안 보이게만 해놓음,, 수정해야 됨
+        // 글쓰기 버튼 안 보이게
         ImageButton plusMoney = (ImageButton) findViewById(R.id.plusMoney);
         plusMoney.setVisibility(View.INVISIBLE);
+
+        ImageButton graph = (ImageButton) findViewById(R.id.graph);
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GraphActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // 잔액
         TextView balance = (TextView) findViewById(R.id.balance);

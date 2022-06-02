@@ -1,24 +1,15 @@
 package kr.co.company.pocketmoney;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
-
-import kr.co.company.pocketmoney.R;
 
 public class ChildMoneyActivity extends AppCompatActivity {
 
@@ -53,7 +44,7 @@ public class ChildMoneyActivity extends AppCompatActivity {
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ChildGraphActivity.class);
+                Intent intent = new Intent(getApplicationContext(), GraphActivity.class);
                 startActivity(intent);
             }
         });
