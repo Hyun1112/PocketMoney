@@ -2,6 +2,7 @@ package kr.co.company.pocketmoney;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,8 +12,10 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.database.Cursor;
+import android.widget.Toast;
 
 public class ChildRewardActivity extends AppCompatActivity {
+    private Context mContext;
     TextView txt_reward[] = new TextView[5];
     CheckBox btn_selector[] = new CheckBox[5];
     DatabaseHelper myDB = new DatabaseHelper(this);
@@ -22,6 +25,11 @@ public class ChildRewardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_reward);
 
+        mContext = getApplicationContext();
+
+        // 토스트 메시지
+        Toast.makeText(mContext, "할 일을 완료하면 사과를 눌러주세요.", Toast.LENGTH_SHORT).show();
+        
         ImageButton backButton = (ImageButton) findViewById(R.id.btn_cback);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
