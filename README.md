@@ -32,7 +32,6 @@ Pocket Money (부모와 아이가 함께 사용하는 용돈 관리 앱)
 
 ### 6. 최종 결과물 시연 영상 
 [![Video Label](http://img.youtube.com/vi/SYE45E-BjM8/0.jpg)](https://youtu.be/SYE45E-BjM8)
-https://youtu.be/SYE45E-BjM8
 <br/>
 
 
