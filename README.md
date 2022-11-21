@@ -28,8 +28,14 @@ Pocket Money (부모와 아이가 함께 사용하는 용돈 관리 앱)
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/66028419/179455983-b6f6f838-7f4d-4c68-8624-4b5862c0c2e6.png">
 <br/>
 
+### 6. 역할
+|:--:|:--:|
+|고유나|UI, 리워드 관리 기능 구현|
+|김현경|UI, 용돈기입장 관리 기능 구현|
+|임수빈|예산 관리 기능 구현, 데이터베이스 관리|
+<br/>
 
-### 6. 최종 결과물 시연 영상 
+### 7. 최종 결과물 시연 영상 
 https://youtu.be/SYE45E-BjM8
 <br/>
 
