@@ -1,4 +1,4 @@
-#Pocket Money 용돈 관리 애플리케이션
+# Pocket Money 용돈 관리 애플리케이션
 <br/>
 
 2022년도 1학기 - HCI 수업에서 진행한 프로젝트 
